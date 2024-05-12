@@ -7,9 +7,10 @@
 
 #define LSH_RL_BUFSIZE 1024
 char *lsh_read_line(void) {
-  int bufsize = LSH_RL_BUFSIZE;
-  int position = 0;
-  char *buffer = malloc(sizeof(char) * bufsize);
+  int bufsize = LSH_RL_BUFSIZE; // Initial buffer size.
+  int position = 0;             // Current position in the buffer.
+  char *buffer =
+      malloc(sizeof(char) * bufsize); // Allocate memory for the buffer.
   int c;
 
   if (!buffer) {
